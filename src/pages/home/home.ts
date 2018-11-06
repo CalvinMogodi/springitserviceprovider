@@ -12,6 +12,7 @@ export class HomePage {
   imgURL = '';
   public thereIsAvailableRequest = false;
   public userId = 0;
+  public showRequest = false;
   public availableRequest = {
     id: '',
     carType: '',
@@ -82,6 +83,12 @@ export class HomePage {
     updates['requests/'+this.availableRequest.id+'/userId/'] = this.userId;    
     this.db.database.ref().update(updates);
     this.thereIsAvailableRequest = false;
+    this.showRequest = true;
+  }
+
+  close(){
+    this.thereIsAvailableRequest = false;
+    this.showRequest = false;
   }
 
 

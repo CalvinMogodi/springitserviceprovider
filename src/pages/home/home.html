@@ -12,7 +12,7 @@
 </ion-header>
 
 <ion-content padding style="text-align: center;">
-  <ion-card *ngIf="thereIsAvailableRequest">
+  <ion-card *ngIf="thereIsAvailableRequest && !showRequest">
     <img src="{{imgURL}}"/>
     <ion-card-content>
       <p>
@@ -26,5 +26,20 @@
     <br><br>
   </ion-card> 
 
-  <h3 *ngIf="!thereIsAvailableRequest" style="color: orange;margin-top: 50%;">Please stay online to receive requests.</h3>
+  <h3 *ngIf="!thereIsAvailableRequest && !showRequest" style="color: orange;margin-top: 50%;">Please stay online to receive requests.</h3>
+
+  <ion-card *ngIf="showRequest">
+    <img src="{{imgURL}}"/>
+    <ion-card-content>
+      <p>
+        Car Type: {{availableRequest.carType}}<br>
+        Date: {{availableRequest.date}}<br>
+        Time: {{availableRequest.time}}<br>
+        Location: {{availableRequest.location}}<br>
+      </p>
+    </ion-card-content>
+    <button ion-button round (click)="close()">Close</button>
+    <br><br>
+  </ion-card> 
+  
 </ion-content>
