@@ -1,0 +1,21 @@
+page-login {
+    .logo_text{
+        border-color: blue;
+        border: 1px blue solid;
+        font-size: x-large;
+        color: white;
+        box-shadow: 0px 0px 2px 1px #000000;
+    }
+    
+    .toolbar-background-md {
+        background: #194794;    
+    }
+    
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+        color: #FFFFFF;
+    }
+
+    .center{
+        text-align: center;
+    }
+}
