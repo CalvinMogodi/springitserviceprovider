@@ -22,7 +22,8 @@ export class HomePage {
     createdDate: new Date(),
     userId: 0,
     active: false,
-    pickedup: false
+    pickedup: false,
+    phonenumber: 0
   };
   public timeInSeconds = 30;
   public time = this.timeInSeconds;
@@ -35,7 +36,7 @@ export class HomePage {
   constructor(public navCtrl: NavController, public db: AngularFireDatabase, public zone: NgZone, private storage: Storage) {
     storage.get('userId').then((val) => {
       this.userId = val;
-      this.db.database.ref().child('users/' + val).on('value', snapshot => {
+      this.db.database.ref().child('serviceproviders/' + val).on('value', snapshot => {
         var user = snapshot.val();
       if(user.busy){
         this.thereIsAvailableRequest = false;
