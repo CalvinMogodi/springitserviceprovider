@@ -22,7 +22,8 @@ export class HomePage {
     createdDate: new Date(),
     userId: 0,
     active: false,
-    pickedup: false
+    pickedup: false,
+    phonenumber: 0
   };
   public timeInSeconds = 30;
   public time = this.timeInSeconds;
