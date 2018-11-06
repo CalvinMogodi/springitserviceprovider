@@ -1,3 +1,39 @@
 page-home {
+    .toolbar-background-md {
+        background: #194794;    
+    }
 
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+        color: #FFFFFF;
+    }
+
+    .logo_text{
+        border-color: blue;
+        border: 1px blue solid;
+        font-size: x-large;
+        color: white;
+        box-shadow: 0px 0px 2px 1px #000000;
+    }
+
+    .toolbar-title-md {
+        color: white;
+    }
+    .center{
+        text-align: center;
+    }
+
+    .white{
+        color: white;
+    }
+
+    .large{
+        font-size: large;
+    }
+
+    .item{
+        background-color: #194794;
+        border-radius: 15px;
+        color: white;
+        margin-top: 5px;
+    }    
 }

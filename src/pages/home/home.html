@@ -1,17 +1,30 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+      <button ion-button menuToggle class="logo_text">
+          S
+      </button>
+    <ion-title>Incoming Requests</ion-title> 
+    <button ion-button menuToggle end>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding style="text-align: center;">
+  <ion-card *ngIf="thereIsAvailableRequest">
+    <img src="{{imgURL}}"/>
+    <ion-card-content>
+      <p>
+        Car Type: {{availableRequest.carType}}<br>
+        Date: {{availableRequest.date}}<br>
+        Time: {{availableRequest.time}}<br>
+      </p>
+      <h3 style="font-size: xx-large;color: red;">{{displayTime}}</h3>
+    </ion-card-content>
+    <button ion-button round (click)="accept()">Accept</button>
+    <br><br>
+  </ion-card> 
+
+  <h3 *ngIf="!thereIsAvailableRequest" style="color: orange;margin-top: 50%;">Please stay online to receive requests.</h3>
 </ion-content>

@@ -1,5 +1,7 @@
 {
   "name": "springitserviceprovider",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
