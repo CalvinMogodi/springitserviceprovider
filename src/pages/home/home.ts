@@ -46,7 +46,7 @@ export class HomePage {
           if (result != null) {
             snapshot.forEach(snap => {
               var request = snap.val();
-              if (!request.pickedup && !this.thereIsAvailableRequest) {
+              if (!request.pickedup && !this.thereIsAvailableRequest && request.status == 'New') {
                 this.availableRequest = request;
                 this.thereIsAvailableRequest = true;
                 this.availableRequest.id = snap.key;
